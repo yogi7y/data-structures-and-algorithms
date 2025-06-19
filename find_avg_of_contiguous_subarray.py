@@ -1,4 +1,4 @@
-# G: 1.2
+# G: 2.1
 # Given an array, find the average of all contiguous subarrays of size ‘K’ in it.
 
 
