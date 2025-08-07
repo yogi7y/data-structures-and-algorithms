@@ -41,12 +41,23 @@ def find_avg_of_contiguous_subarray_of_size_k_2(arr, k):
     return result
 
 
-input = [1, 3, 2, 6, -1, 4, 1, 8, 2]
-k = 5
-expected_result = [2.2, 2.8, 2.4, 3.6, 2.8]
+cases = [
+    {
+        "input": [1, 3, 2, 6, -1, 4, 1, 8, 2],
+        "k": 5,
+        "expected": [2.2, 2.8, 2.4, 3.6, 2.8],
+    },
+]
 
-result = find_avg_of_contiguous_subarray_of_size_k(input, k)
-assert result == expected_result
+for case in cases:
+    result = find_avg_of_contiguous_subarray_of_size_k(case["input"], case["k"])
+    print(
+        f"input: {case['input']}, k: {case['k']}, expected: {case['expected']}, got: {result}"
+    )
+    assert result == case["expected"]
 
-result_2 = find_avg_of_contiguous_subarray_of_size_k_2(input, k)
-assert result_2 == expected_result
+    result_2 = find_avg_of_contiguous_subarray_of_size_k_2(case["input"], case["k"])
+    print(
+        f"input: {case['input']}, k: {case['k']}, expected: {case['expected']}, got: {result_2}"
+    )
+    assert result_2 == case["expected"]

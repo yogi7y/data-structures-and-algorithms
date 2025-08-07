@@ -16,17 +16,20 @@ def max_subarray_of_size_k(arr, k):
 
     return result
 
+cases = [
+    {
+        "input": [2, 1, 5, 1, 3, 2],
+        "k": 3,
+        "expected": 9,
+    },
+    {
+        "input": [2, 3, 4, 1, 5],
+        "k": 2,
+        "expected": 7,
+    },
+]
 
-input_1 = [2, 1, 5, 1, 3, 2]
-k_1 = 3
-expected_1 = 9
-
-input_2 = [2, 3, 4, 1, 5]
-k_2 = 2
-expected_2 = 7
-
-result_1 = max_subarray_of_size_k(input_1, k_1)
-result_2 = max_subarray_of_size_k(input_2, k_2)
-
-assert result_1 == expected_1
-assert result_2 == expected_2
+for case in cases:
+    result = max_subarray_of_size_k(case["input"], case["k"])
+    print(f"input: {case['input']}, k: {case['k']}, expected: {case['expected']}, got: {result}")
+    assert result == case["expected"]

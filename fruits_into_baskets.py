@@ -42,5 +42,5 @@ def fruits_into_basket(arr):
 
 for case in cases:
     result = fruits_into_basket(case["input"])
-    print(result)
+    print(f"input: {case['input']}, expected: {case['expected']}, got: {result}")
     assert result == case["expected"]

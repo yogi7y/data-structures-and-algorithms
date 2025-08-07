@@ -61,9 +61,9 @@ def longest_substring_without_repeating_characters_2(input):
 
 for case in cases:
     result = longest_substring_without_repeating_characters(case["input"])
-    print(result)
+    print(f"input: {case['input']}, expected: {case['expected']}, got: {result}")
     assert result == case["expected"]
 
     result_2 = longest_substring_without_repeating_characters_2(case["input"])
-    print(result_2)
+    print(f"input: {case['input']}, expected: {case['expected']}, got: {result_2}")
     assert result_2 == case["expected"]
